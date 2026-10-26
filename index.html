@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>RaiCompany — Шторы, ткани и карнизы на заказ</title>
 <meta name="description" content="Ткани на метраж, готовые шторы, пошив на заказ, рулонные и римские шторы, карнизы и бесплатные образцы.">
-<meta name="theme-color" content="#f8f3eb">
+<meta name="theme-color" content="#f6f2ec">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%238a5a3c'/%3E%3Cpath d='M9 7c5 6 5 12 0 18M16 7c5 6 5 12 0 18M23 7c5 6 5 12 0 18' stroke='%23fff' stroke-width='2' fill='none'/%3E%3C/svg%3E">
 <script>
 /* тема применяется до отрисовки, чтобы не было вспышки */
-(function(){try{var t=JSON.parse(localStorage.getItem('drape:theme'));if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}document.documentElement.classList.add('js')})();
+(function(){try{var t=JSON.parse(localStorage.getItem('drape:theme'));if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}document.documentElement.classList.add('js');setTimeout(function(){document.documentElement.classList.add('fx-off')},6000)})();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f8f3eb;--surface:#fffaf4;--surface-2:#f1e7da;--text:#4a3b31;--muted:#7f6d5e;--line:rgba(74,59,49,.14);--accent:#a27552;--accent-2:#8c6a52;--ok:#2e7d4f;--warn:#9a5b00;--err:#b3261e;--radius:14px;--radius-sm:8px;--shadow:0 1px 2px rgba(0,0,0,.05),0 8px 28px rgba(60,40,20,.08);--container:1240px;--gutter:24px;--ease:cubic-bezier(.16,1,.3,1);--serif:'Fraunces','Cormorant Garamond',Georgia,serif;--sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color-scheme:light}
-
-
+:root{--bg:#f6f2ec;--surface:#fffdf9;--surface-2:#efe8dd;--text:#1d1a17;--muted:#6f6860;--line:rgba(29,26,23,.12);--accent:#8a5a3c;--accent-2:#2f4a43;--ok:#2e7d4f;--warn:#9a5b00;--err:#b3261e;--radius:14px;--radius-sm:8px;--shadow:0 1px 2px rgba(0,0,0,.05),0 8px 28px rgba(60,40,20,.08);--wall:#efe5d8;--curtain:#e6d0bc;--lightc:#fff1d6;--container:1240px;--gutter:24px;--ease:cubic-bezier(.16,1,.3,1);--serif:'Fraunces','Cormorant Garamond',Georgia,serif;--sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14110f;--surface:#1c1815;--surface-2:#26211d;--text:#f3ede6;--muted:#a39a8f;--line:rgba(255,255,255,.12);--accent:#d49a74;--accent-2:#8fb3a6;--ok:#6fcf97;--warn:#f2b35c;--err:#ff8a80;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.35);--wall:#2a2320;--curtain:#9b6a4c;--lightc:#e9c99a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14110f;--surface:#1c1815;--surface-2:#26211d;--text:#f3ede6;--muted:#a39a8f;--line:rgba(255,255,255,.12);--accent:#d49a74;--accent-2:#8fb3a6;--ok:#6fcf97;--warn:#f2b35c;--err:#ff8a80;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.35);--wall:#2a2320;--curtain:#9b6a4c;--lightc:#e9c99a;color-scheme:dark}
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:90px}
 body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.55 var(--sans);overflow-x:clip;min-width:320px;padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
@@ -52,10 +52,10 @@ h1:focus,h2:focus,main:focus,[tabindex="-1"]:focus{outline:none}
 .btn[disabled]{opacity:.5;cursor:not-allowed}
 .ib{position:relative;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;border:0;background:transparent;color:var(--text);cursor:pointer;text-decoration:none}.ib:hover{background:var(--surface-2)}
 .cnt{position:absolute;top:2px;right:0;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--accent);color:#fff;font-size:11px;font-weight:600;display:grid;place-items:center;line-height:1}
-
+:root[data-theme="dark"] .cnt{color:#14110f}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .cnt{color:#14110f}}
 /* шапка */
 .announce{background:var(--accent-2);color:#f3ede6;text-align:center;font-size:13px;padding:7px var(--gutter)}
-
+:root[data-theme="dark"] .announce{color:#14110f}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .announce{color:#14110f}}
 .hdr{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
 .hdr.scrolled{border-bottom-color:var(--line)}
 .hdr-in{height:72px;display:flex;align-items:center;gap:16px;transition:height .3s var(--ease)}
@@ -106,7 +106,7 @@ h1:focus,h2:focus,main:focus,[tabindex="-1"]:focus{outline:none}
 .hero{overflow:hidden;--px:0}
 .hero-in{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding-top:clamp(32px,5vw,72px);padding-bottom:clamp(32px,5vw,72px)}
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
-.hero-art{position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;background:#d8c4ad;box-shadow:var(--shadow)}
+.hero-art{position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;background:#2f4a43;box-shadow:var(--shadow)}
 .folds{position:absolute;inset:-6% -10%;background:repeating-linear-gradient(90deg,rgba(0,0,0,.34) 0,rgba(255,255,255,.12) 7%,rgba(0,0,0,0) 13%,rgba(0,0,0,.28) 22%),linear-gradient(180deg,rgba(255,255,255,.12),rgba(0,0,0,.35)),linear-gradient(#8a5a3c,#8a5a3c);transform:translateX(calc(var(--px)*-22px));transition:transform .5s var(--ease)}
 .hero-art::after{content:"";position:absolute;left:0;right:0;top:0;height:10px;background:linear-gradient(#5c4637,#3b2d23)}
 .strip{border-block:1px solid var(--line);background:var(--surface)}
@@ -127,7 +127,7 @@ h1:focus,h2:focus,main:focus,[tabindex="-1"]:focus{outline:none}
 .steps{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}.step h3{font-size:20px}.step p{color:var(--muted);margin:0;font-size:15px}
 .step-n{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;font-weight:600;margin-bottom:14px}
-
+:root[data-theme="dark"] .step-n{color:#14110f}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .step-n{color:#14110f}}
 .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
 .rev{margin:0 0 12px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}.rev blockquote{margin:0 0 12px;font-size:16px}.rev figcaption{font-size:14px;color:var(--muted)}
 .faq details{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);margin-bottom:8px;padding:0 18px}
@@ -135,7 +135,7 @@ h1:focus,h2:focus,main:focus,[tabindex="-1"]:focus{outline:none}
 .faq summary::-webkit-details-marker{display:none}.faq summary::after{content:"+";font-size:22px;color:var(--accent)}.faq details[open] summary::after{content:"−"}
 .faq p{color:var(--muted);padding-bottom:12px}
 .subscribe{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;background:var(--accent-2);color:#f3ede6;border-radius:var(--radius);padding:clamp(24px,4vw,48px)}
-
+:root[data-theme="dark"] .subscribe{background:var(--surface-2);color:var(--text)}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .subscribe{background:var(--surface-2);color:var(--text)}}
 .subscribe .muted{color:inherit;opacity:.85}.subscribe .err{color:#ffd0cb}
 .sub-f{display:flex;gap:12px;align-items:flex-start}.sub-f .field{flex:1}
 /* поля */
@@ -201,10 +201,10 @@ input[aria-invalid="true"]{border-color:var(--err)}
 .badges{position:absolute;left:10px;top:10px;display:flex;flex-direction:column;gap:4px;align-items:flex-start;z-index:2}
 .bdg{background:var(--surface);color:var(--text);font-size:12px;font-weight:600;padding:3px 8px;border-radius:6px;box-shadow:0 1px 2px rgba(0,0,0,.15)}
 .bdg-new{background:var(--accent-2);color:#fff}.bdg-sale{background:#b3261e;color:#fff}.bdg-order{background:var(--warn);color:#fff}
-
+:root[data-theme="dark"] .bdg-new,:root[data-theme="dark"] .bdg-order{color:#14110f}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .bdg-new,:root:not([data-theme="light"]) .bdg-order{color:#14110f}}
 .fav{position:absolute;right:8px;top:8px;z-index:3;width:44px;height:44px;border-radius:50%;border:0;background:color-mix(in srgb,var(--surface) 88%,transparent);color:var(--text);cursor:pointer;display:grid;place-items:center;transition:transform .2s var(--ease)}
 .fav:hover{transform:scale(1.08)}.fav[aria-pressed="true"]{color:#c0392b}
-.pv-actions .fav{padding:0;position:static;border:1px solid var(--line);border-radius:10px;background:transparent}
+.pv-actions .fav{padding:0;position:relative;border:1px solid var(--line);border-radius:10px;background:transparent}
 .card-b{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px;flex:1}
 .card-t{margin:0;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
 .card-n{font:600 16px/1.3 var(--sans);letter-spacing:0;margin:0}.card-n a{text-decoration:none}.card-n a:hover{color:var(--accent)}
@@ -268,7 +268,7 @@ input[aria-invalid="true"]{border-color:var(--err)}
 .stepper{list-style:none;display:flex;gap:8px;padding:0;margin:0 0 24px;flex-wrap:wrap}
 .stepper li{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:14px;margin-right:16px}.stepper li[aria-current]{color:var(--text);font-weight:600}
 .sn{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);font-size:13px}.stepper li[aria-current] .sn,.stepper li.done .sn{background:var(--accent);color:#fff;border-color:var(--accent)}
-
+:root[data-theme="dark"] .stepper li[aria-current] .sn,:root[data-theme="dark"] .stepper li.done .sn{color:#14110f}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .stepper li[aria-current] .sn,:root:not([data-theme="light"]) .stepper li.done .sn{color:#14110f}}
 .co-l{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:32px;align-items:start;padding-bottom:64px}
 .co-f{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}.co-f h2{font-size:26px}
 .co-a{display:flex;justify-content:space-between;gap:12px;margin-top:16px}
@@ -337,10 +337,68 @@ input[aria-invalid="true"]{border-color:var(--err)}
   body.print-order .order-a{display:none!important}
   .js .rv{opacity:1;transform:none}
 }
+.btn.wa{background:#1c7a45;color:#fff;margin-top:8px}.btn.wa:hover{background:#176a3b}
+
+/* ===== живой дизайн ===== */
+.btn{position:relative;overflow:hidden;isolation:isolate}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .3s var(--ease);background:radial-gradient(140px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.3),transparent 62%)}
+.btn-secondary::before,.btn-ghost::before{background:radial-gradient(140px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--accent) 24%,transparent),transparent 62%)}
+.btn:hover::before{opacity:1}
+.btn::after{content:"";position:absolute;left:var(--mx,50%);top:var(--my,50%);width:90px;height:90px;margin:-45px;border-radius:50%;background:currentColor;opacity:0;pointer-events:none;z-index:-1}
+.btn.rip::after{animation:rip .65s var(--ease)}
+@keyframes rip{from{transform:scale(0);opacity:.28}to{transform:scale(4.5);opacity:0}}
+.btn:active{transform:scale(.97)}
+.btn[data-mag]{transform:translate(var(--tx,0px),var(--ty,0px))}
+.btn[data-mag]:hover{transform:translate(var(--tx,0px),calc(var(--ty,0px) - 1px))}
+.btn[data-mag]:active{transform:translate(var(--tx,0px),var(--ty,0px)) scale(.97)}
+/* заголовок по словам */
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em;margin-bottom:-.1em}
+.hero h1 .w>span{display:inline-block;animation:wrise 1s var(--ease) both;animation-delay:calc(var(--d) + 650ms)}
+@keyframes wrise{from{transform:translateY(110%)}to{transform:none}}
+.hero .eyebrow,.hero .lead,.hero-cta{animation:fadeup .9s var(--ease) both;animation-delay:1000ms}
+.hero .lead{animation-delay:1100ms}.hero-cta{animation-delay:1250ms}
+@keyframes fadeup{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+/* hero: окно со шторой */
+.hero-in{grid-template-columns:1fr 1fr}
+.hero-art{background:var(--wall)}
+.hero-art.gl .folds,.hero-art.gl::after{display:none}
+.hero-cv{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y}
+.curtain-btn{position:absolute;left:14px;bottom:14px;z-index:2;min-height:44px;padding:0 16px;border-radius:10px;border:1px solid var(--line);background:color-mix(in srgb,var(--surface) 88%,transparent);color:var(--text);font:500 14px var(--sans);cursor:pointer;backdrop-filter:blur(6px);transition:background-color .25s var(--ease),transform .25s var(--ease)}
+.curtain-btn:hover{background:var(--surface);transform:translateY(-1px)}
+/* шторы-переход */
+.drape-fx{position:fixed;inset:0;z-index:200;overflow:hidden;visibility:hidden;pointer-events:none}
+.js .drape-fx{visibility:visible;pointer-events:auto}
+.js .drape-fx.idle{visibility:hidden;pointer-events:none}
+.fx-off .drape-fx{display:none!important}
+.dp{position:absolute;top:0;bottom:0;width:50.6%;will-change:transform;background:
+  repeating-linear-gradient(90deg,rgba(70,40,20,.30) 0,rgba(255,255,255,.20) 22px,rgba(0,0,0,0) 40px,rgba(70,40,20,.22) 66px),
+  linear-gradient(180deg,rgba(255,255,255,.14),rgba(0,0,0,.16)),var(--curtain)}
+.dp-l{left:0;box-shadow:6px 0 24px rgba(40,20,10,.28)}
+.dp-r{right:0;box-shadow:-6px 0 24px rgba(40,20,10,.28)}
+.dp-rod{position:absolute;left:0;right:0;top:0;height:10px;z-index:3;background:linear-gradient(#cdb296,#8d7560);opacity:0;transition:opacity .6s}
+.shut .dp-rod{opacity:1}
+.dp-logo{position:absolute;left:50%;top:50%;z-index:2;transform:translate(-50%,-50%);font:500 clamp(30px,6vw,64px) var(--serif);letter-spacing:-.02em;color:#2b1d14;opacity:0;transition:opacity .4s}
+.shut .dp-logo{opacity:1;transition-delay:.3s}
+:root[data-theme="dark"] .dp-logo{color:#f3ede6}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .dp-logo{color:#f3ede6}}
+/* 3D-галерея */
+.g3-hint{margin-top:-8px}
+.g3{--cw:190px;--ch:250px;position:relative;margin-top:12px;height:clamp(340px,44vw,430px);perspective:1500px;overflow:hidden;cursor:grab;touch-action:pan-y;display:grid;place-items:center;user-select:none;-webkit-user-select:none}
+.g3.grab{cursor:grabbing}
+.g3-ring{position:relative;width:var(--cw);height:var(--ch);transform-style:preserve-3d;will-change:transform}
+.g3-c{position:absolute;inset:0;display:flex;flex-direction:column;border-radius:14px;overflow:hidden;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);text-decoration:none;backface-visibility:hidden;-webkit-backface-visibility:hidden;opacity:var(--o,1);transform:rotateY(calc(var(--i) * (360deg / var(--n)))) translateZ(var(--R,400px))}
+.g3-art{position:relative;flex:1;display:block}.g3-art .art{position:absolute;inset:0}
+.g3-cap{display:flex;flex-direction:column;gap:2px;padding:10px 12px 12px;font-size:12px;color:var(--muted);line-height:1.3}.g3-cap b{font-size:14px;color:var(--text);font-weight:600}
+.g3-c:hover .g3-cap b{color:var(--accent)}
+@media(max-width:560px){.g3{--cw:150px;--ch:205px;height:320px}}
+@media(max-width:1023px){.hero-in{grid-template-columns:1fr}}
+@media(max-width:560px){.hero-art{display:block;aspect-ratio:4/5}}
+@media(prefers-reduced-motion:reduce){.drape-fx{display:none!important}.hero h1 .w>span,.hero .eyebrow,.hero .lead,.hero-cta{animation:none!important}}
+@media(max-width:1023px) and (min-width:561px){.hero-art{aspect-ratio:1/1}}
 
 </style>
 </head>
 <body>
+<div class="drape-fx shut" id="drapeFx" aria-hidden="true"><div class="dp dp-l"></div><div class="dp dp-r"></div><div class="dp-rod"></div><div class="dp-logo">RaiCompany</div></div>
 <a class="skip" href="#app">Перейти к содержимому</a>
 <div class="announce">Бесплатные образцы ткани · Доставка по Казахстану · Пошив за 5–10 дней</div>
 <header class="hdr" id="hdr">
@@ -356,7 +414,8 @@ input[aria-invalid="true"]{border-color:var(--err)}
         <form class="sform" id="sform2" role="search" hidden><label class="sr" for="sinput">Поиск по каталогу</label><input id="sinput" type="search" autocomplete="off" placeholder="Ткань, цвет, артикул" role="combobox" aria-expanded="false" aria-controls="slistbox" aria-autocomplete="list"><ul id="slistbox" role="listbox" aria-label="Подсказки" hidden></ul></form>
         <button class="ib" id="sbtn" type="button" aria-label="Поиск" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
       </div>
-            <a class="ib" id="favbtn" href="#/favorites" aria-label="Избранное"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5S3.5 15 3.5 8.8A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8.5 1.8C20.5 15 12 20.5 12 20.5z"/></svg><span class="cnt" id="favn" hidden>0</span></a>
+      <button class="ib" id="themebtn" type="button" aria-label="Сменить тему" aria-pressed="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></button>
+      <a class="ib" id="favbtn" href="#/favorites" aria-label="Избранное"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5S3.5 15 3.5 8.8A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8.5 1.8C20.5 15 12 20.5 12 20.5z"/></svg><span class="cnt" id="favn" hidden>0</span></a>
       <a class="ib" id="cartbtn" href="#/cart" aria-label="Корзина"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 8h14l-1.2 11H6.2z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><span class="cnt" id="cartn" hidden>0</span></a>
     </div>
   </div>
@@ -378,10 +437,10 @@ input[aria-invalid="true"]{border-color:var(--err)}
     <div class="ftr-g">
       <div><a class="logo" href="#/">RaiCompany</a><p style="margin-top:12px">Ткани, шторы и карнизы на заказ. Шьём в Астане, доставляем по Казахстану.</p></div>
       <div><h3>Магазин</h3><ul><li><a href="#/catalog">Каталог</a></li><li><a href="#/calculator">Шторы на заказ</a></li><li><a href="#/samples">Образцы</a></li><li><a href="#/favorites">Избранное</a></li></ul></div>
-      <div><h3>Информация</h3><ul><li><a href="#/about">О магазине</a></li><li><a href="#/delivery">Доставка и оплата</a></li><li><a href="#/contacts">Контакты</a></li><li><a href="#">Политика конфиденциальности</a></li><li><a href="#">Публичная оферта</a></li></ul></div>
-      <div><h3>Контакты</h3><p><a href="https://www.google.com/maps/search/?api=1&amp;query=E-429+14%2F2+Astana+Kazakhstan" target="_blank" rel="noopener">E-429 14/2 Astana Kazakhstan</a></p><p><a href="tel:+77001405040">+7 700 140 50 40</a></p><p><a href="https://wa.me/77001405040" target="_blank" rel="noopener">Написать в WhatsApp</a></p><p>Пн–Сб 10:00–19:00</p><p>Оплата: при получении, онлайн (демо), рассрочка (демо)</p></div>
+      <div><h3>Информация</h3><ul><li><a href="#/about">О магазине</a></li><li><a href="#/delivery">Доставка и оплата</a></li><li><a href="#/contacts">Контакты</a></li></ul></div>
+      <div><h3>Контакты</h3><p>г. Астана, ул. E-429, 14/2</p><p><a href="tel:+77001405040">+7 700 140 50 40</a></p><p><a href="https://wa.me/77001405040" target="_blank" rel="noopener">Написать в WhatsApp</a></p><p>Пн–Сб 10:00–19:00</p><p>Оплата: при получении или предоплатой переводом</p></div>
     </div>
-    <div class="ftr-b"><span>© <span id="year">2026</span> RaiCompany. Демонстрационный магазин.</span><span>Цены указаны в тенге</span><a href="https://wa.me/77001405040" target="_blank" rel="noopener">Связаться в WhatsApp: +7 700 140 50 40</a></div>
+    <div class="ftr-b"><span>© <span id="year">2026</span> RaiCompany.</span><span>Цены указаны в тенге</span></div>
   </div>
 </footer>
 <div class="toasts" id="toasts" aria-live="polite" role="status"></div>
@@ -390,6 +449,7 @@ input[aria-invalid="true"]{border-color:var(--err)}
 <script>
 (function(){'use strict';
 /* ================= DATA ================= */
+const SHOP = { name: 'RaiCompany', phone: '+7 700 140 50 40', tel: '+77001405040', wa: '77001405040', address: 'г. Астана, ул. E-429, 14/2', hours: 'Пн–Сб 10:00–19:00' };
 const LS_PREFIX = 'drape:';
 const SCHEMA = 'v1';
 const TAILORING = { classic: 1800, tulle: 1200, roman: 4500, roller: 0, japanese: 3500, valance: 2500 }; // ₸ за м² готового полотна
@@ -586,7 +646,7 @@ const CATALOG = [];
     const ckeys = [].concat(cks);
     const disc = x.disc || 0;
     const it = {
-      id: ids, sku: 'DR-' + (T.c || type.replace(/[^a-z]/gi, '').slice(0, 3).toUpperCase()) + '-' + (100 + n).toString().padStart(4, '0'),
+      id: ids, sku: 'RC-' + (T.c || type.replace(/[^a-z]/gi, '').slice(0, 3).toUpperCase()) + '-' + (100 + n).toString().padStart(4, '0'),
       category: cat, type, name: nm, colorKeys: ckeys, colors: ckeys.map(k => COLORS[k][1]),
       composition: (T.comp || x.comp || []).map(c => ({ m: c[0], p: c[1] })),
       weight: T.wt || 0, width: x.width || T.w || 0, repeat: x.pat && x.pat !== 'solid' ? (T.rep || 32) : (T.rep && !x.pat && T.art === 'pattern' ? T.rep : 0),
@@ -957,14 +1017,15 @@ function viewHome() {
     const rep = BY_ID[repItem(c.id)] || CATALOG.find(i => i.category === c.id);
     return '<a class="tile rv" href="#/catalog/' + c.id + '"><div class="tile-art">' + artHTML(rep, { zoom: 2 }) + '</div><div class="tile-b"><h3>' + esc(c.name) + '</h3><p>' + esc(c.note) + '</p><span class="tile-n">' + n + ' ' + plural(n, 'товар', 'товара', 'товаров') + '</span></div></a>';
   }).join('');
-  const html = '<section class="hero"><div class="container hero-in"><div class="hero-t"><p class="eyebrow">Ткани, шторы, карнизы</p><h1>Шторы, которые меняют комнату</h1><p class="lead">Выберите ткань по параметрам, закажите бесплатный образец и рассчитайте пошив по своим меркам. Шьём и привозим по всему Казахстану.</p><div class="hero-cta"><a class="btn btn-primary" href="#/catalog">Смотреть каталог</a><a class="btn btn-secondary" href="#/calculator">Рассчитать шторы</a></div></div><div class="hero-art" aria-hidden="true"><div class="folds"></div></div></div></section>' +
+  const html = '<section class="hero"><div class="container hero-in"><div class="hero-t"><p class="eyebrow">Ткани, шторы, карнизы</p><h1 aria-label="Шторы, которые меняют комнату">' + words('Шторы, которые меняют комнату') + '</h1><p class="lead">Выберите ткань по параметрам, закажите бесплатный образец и рассчитайте пошив по своим меркам. Шьём и привозим по всему Казахстану.</p><div class="hero-cta"><a class="btn btn-primary" data-mag href="#/catalog">Смотреть каталог</a><a class="btn btn-secondary" data-mag href="#/calculator">Рассчитать шторы</a></div></div><div class="hero-art"><div class="folds" aria-hidden="true"></div><button class="curtain-btn" type="button" aria-pressed="false">Раздвинуть шторы</button></div></div></section>' +
     '<section class="strip" aria-label="Преимущества"><div class="container strip-in"><div><b>Образцы бесплатно</b><span>10×15 см, до 5 шт.</span></div><div><b>Пошив по вашим меркам</b><span>Калькулятор расхода</span></div><div><b>Замер и установка</b><span>В Астане и области</span></div><div><b>Гарантия 2 года</b><span>На пошив и фурнитуру</span></div></div></section>' +
     '<section class="sec"><div class="container"><h2>Категории</h2><div class="tiles">' + tiles + '</div></div></section>' +
-    '<section class="sec alt"><div class="container"><div class="sec-h"><h2>Хиты продаж</h2><div class="sl-btns"><button class="btn btn-ghost icon" type="button" data-act="slide" data-dir="-1" aria-label="Предыдущие">←</button><button class="btn btn-ghost icon" type="button" data-act="slide" data-dir="1" aria-label="Следующие">→</button></div></div><div class="slider" id="hits" tabindex="0" aria-label="Хиты продаж, прокрутка">' + hits(12).map(i => card(i)).join('') + '</div></div></section>' +
+    gallery3dHTML() + '<section class="sec"><div class="container"><div class="sec-h"><h2>Хиты продаж</h2><div class="sl-btns"><button class="btn btn-ghost icon" type="button" data-act="slide" data-dir="-1" aria-label="Предыдущие">←</button><button class="btn btn-ghost icon" type="button" data-act="slide" data-dir="1" aria-label="Следующие">→</button></div></div><div class="slider" id="hits" tabindex="0" aria-label="Хиты продаж, прокрутка">' + hits(12).map(i => card(i)).join('') + '</div></div></section>' +
     '<section class="sec"><div class="container"><h2>Подбор по комнате</h2><div class="rtabs" role="tablist" aria-label="Комната">' + Object.keys(ROOMS).map((k, i) => '<button role="tab" id="rt-' + k + '" class="rtab" type="button" data-act="room" data-room="' + k + '" aria-selected="' + (i === 0) + '" tabindex="' + (i === 0 ? 0 : -1) + '" aria-controls="rpanel">' + ROOMS[k][0] + '</button>').join('') + '</div><div id="rpanel" role="tabpanel" aria-labelledby="rt-living" class="rpanel">' + roomPanel('living') + '</div></div></section>' +
     '<section class="sec alt"><div class="container"><h2>Как это работает</h2><ol class="steps">' + [['Выберите ткань', 'Отфильтруйте каталог по свету, составу, цвету и назначению.'], ['Закажите образец', 'Бесплатный отрез 10×15 см приедет за 2–4 дня.'], ['Рассчитайте и закажите', 'Калькулятор посчитает метраж, пошив и ленту.'], ['Получите и повесьте', 'Привезём шторы и по желанию поможем с установкой.']].map((s, i) => '<li class="step rv"><span class="step-n">' + (i + 1) + '</span><h3>' + s[0] + '</h3><p>' + s[1] + '</p></li>').join('') + '</ol></div></section>' +
     '<section class="sec"><div class="container"><h2>Отзывы</h2><div class="revs">' + REVIEWS.map(r => '<figure class="rev rv"><blockquote>' + esc(r[2]) + '</blockquote><figcaption><b>' + esc(r[0]) + '</b>, ' + esc(r[1]) + '</figcaption></figure>').join('') + '</div></div></section>' +
-    '<section class="sec alt"><div class="container narrow"><h2>Частые вопросы</h2><div class="faq">' + FAQ.map(f => '<details><summary>' + esc(f[0]) + '</summary><p>' + esc(f[1]) + '</p></details>').join('') + '</div></div></section>' ;
+    '<section class="sec alt"><div class="container narrow"><h2>Частые вопросы</h2><div class="faq">' + FAQ.map(f => '<details><summary>' + esc(f[0]) + '</summary><p>' + esc(f[1]) + '</p></details>').join('') + '</div></div></section>' +
+    '<section class="sec"><div class="container"><form class="subscribe" id="subform" novalidate><div><h2>Новинки и скидки на почту</h2><p class="muted">Пишем раз в месяц. Отписаться можно в любой момент.</p></div><div class="sub-f"><div class="field"><label for="sub-email">Электронная почта</label><input id="sub-email" name="email" type="email" autocomplete="email" placeholder="name@example.com" aria-describedby="sub-err"><p class="err" id="sub-err" role="alert"></p></div><button class="btn btn-primary" type="submit">Подписаться</button></div></form></div></section>';
   return { title: 'RaiCompany — Шторы, ткани и карнизы на заказ', html, mount: mountHome };
 }
 function roomPanel(k) {
@@ -978,7 +1039,9 @@ ACTS.room = function (el) {
   const p = $('#rpanel'); p.innerHTML = roomPanel(k); p.setAttribute('aria-labelledby', 'rt-' + k); reveal(p);
 };
 ACTS.slide = function (el) { const s = $('#hits'); if (s) s.scrollBy({ left: +el.dataset.dir * Math.max(240, s.clientWidth * .8), behavior: reduceMotion() ? 'auto' : 'smooth' }); };
+function words(s) { return s.split(' ').map((w, i) => '<span class="w" style="--d:' + i * 80 + 'ms"><span>' + esc(w) + '</span></span>').join(' '); }
 function mountHome() {
+  initHeroCurtain(); initGallery3D();
   const tabs = $('.rtabs');
   tabs.addEventListener('keydown', e => {
     if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
@@ -987,6 +1050,11 @@ function mountHome() {
   });
   const hero = $('.hero');
   if (hero && !reduceMotion()) hero.addEventListener('mousemove', e => { const r = hero.getBoundingClientRect(); hero.style.setProperty('--px', ((e.clientX - r.left) / r.width - .5).toFixed(3)); }, { passive: true });
+  const f = $('#subform'), em = $('#sub-email'), er = $('#sub-err');
+  const check = () => { const v = em.value.trim(); const ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); er.textContent = ok ? '' : 'Укажите почту в формате name@example.com'; em.setAttribute('aria-invalid', !ok); return ok; };
+  em.addEventListener('blur', () => { if (em.value) check(); });
+  em.addEventListener('input', () => { if (er.textContent) check(); });
+  f.addEventListener('submit', e => { e.preventDefault(); if (!check()) { em.focus(); return; } setState({ subscribed: em.value.trim() }); f.reset(); toast('Спасибо. Мы напишем вам, когда появятся новинки.'); });
 }
 
 /* ---------- каталог ---------- */
@@ -1465,27 +1533,27 @@ function maskPhone(v) {
 const phoneOk = v => String(v).replace(/\D/g, '').length === 11;
 const VALID = {
   name: v => v.trim().length >= 2 ? '' : 'Укажите имя, чтобы мы знали, как к вам обращаться.',
-  phone: v => phoneOk(v) ? '' : 'Укажите номер телефона в формате +7 700 140 50 40.',
+  phone: v => phoneOk(v) ? '' : 'Укажите номер телефона в формате +7 (700) 123-45-67.',
   email: v => !v.trim() || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? '' : 'Проверьте почту: она должна выглядеть как name@example.com.',
   city: v => v.trim().length >= 2 ? '' : 'Укажите город, куда доставить заказ.',
   address: v => v.trim().length >= 5 ? '' : 'Укажите улицу и номер дома.'
 };
 const CO_STEPS = [['Контакты', ['name', 'phone', 'email']], ['Доставка', ['city', 'address']], ['Оплата', []]];
-const DELIVERY_M = { pickup: 'Самовывоз (E-429 14/2 Astana Kazakhstan)', courier: 'Курьером', tk: 'Транспортной компанией' };
-const PAY_M = { cod: 'При получении', online: 'Онлайн (демо)', credit: 'Рассрочка (демо)' };
+const DELIVERY_M = { pickup: 'Самовывоз (' + SHOP.address + ')', courier: 'Курьером', tk: 'Транспортной компанией' };
+const PAY_M = { cod: 'При получении', transfer: 'Предоплата переводом (реквизиты пришлёт менеджер)' };
 function fld(id, label, type, val, o) {
   o = o || {};
   return '<div class="field"><label for="co-' + id + '">' + label + (o.opt ? ' <span class="muted">(необязательно)</span>' : '') + '</label>' + (o.area ? '<textarea id="co-' + id + '" data-co="' + id + '" rows="3">' + esc(val) + '</textarea>' : '<input id="co-' + id + '" data-co="' + id + '" type="' + type + '" value="' + esc(val) + '" autocomplete="' + (o.ac || 'off') + '"' + (o.ph ? ' placeholder="' + o.ph + '"' : '') + (o.im ? ' inputmode="' + o.im + '"' : '') + '>') + '<p class="err" id="co-' + id + '-err" role="alert"></p></div>';
 }
 function coStepHTML(s) {
   const c = state.checkout;
-  if (s === 0) return fld('name', 'Имя', 'text', c.name || '', { ac: 'name' }) + fld('phone', 'Телефон', 'tel', c.phone || '', { ac: 'tel', ph: '+7 (___) ___-__-__', im: 'tel' }) ;
+  if (s === 0) return fld('name', 'Имя', 'text', c.name || '', { ac: 'name' }) + fld('phone', 'Телефон', 'tel', c.phone || '', { ac: 'tel', ph: '+7 (___) ___-__-__', im: 'tel' }) + fld('email', 'Электронная почта', 'email', c.email || '', { ac: 'email', opt: true });
   if (s === 1) {
     const m = c.method || 'courier';
     return '<fieldset class="radios"><legend>Способ получения</legend>' + Object.keys(DELIVERY_M).map(k => '<label class="radio"><input type="radio" name="method" data-co="method" value="' + k + '"' + (m === k ? ' checked' : '') + '><span>' + DELIVERY_M[k] + '</span></label>').join('') + '</fieldset>' + fld('city', 'Город', 'text', c.city || '', { ac: 'address-level2' }) + '<div id="addr-wrap"' + (m === 'pickup' ? ' hidden' : '') + '>' + fld('address', 'Адрес', 'text', c.address || '', { ac: 'street-address' }) + '</div>' + fld('comment', 'Комментарий к заказу', 'text', c.comment || '', { area: true, opt: true });
   }
   const t = calcTotals(state.cart, state.promo, c.method || 'courier');
-  return '<fieldset class="radios"><legend>Способ оплаты</legend>' + Object.keys(PAY_M).map(k => '<label class="radio"><input type="radio" name="pay" data-co="pay" value="' + k + '"' + ((c.pay || 'cod') === k ? ' checked' : '') + '><span>' + PAY_M[k] + '</span></label>').join('') + '</fieldset><p class="note" role="note">Это демонстрационный магазин. Реальная оплата не проводится, заказ сохраняется только в вашем браузере.</p><dl class="kv-s"><div><dt>Получатель</dt><dd>' + esc(c.name || '') + ', ' + esc(c.phone || '') + '</dd></div><div><dt>Получение</dt><dd>' + DELIVERY_M[c.method || 'courier'] + (c.method === 'pickup' ? '' : ', ' + esc(c.city || '') + ', ' + esc(c.address || '')) + '</dd></div><div><dt>К оплате</dt><dd><b>' + money(t.total) + '</b></dd></div></dl>';
+  return '<fieldset class="radios"><legend>Способ оплаты</legend>' + Object.keys(PAY_M).map(k => '<label class="radio"><input type="radio" name="pay" data-co="pay" value="' + k + '"' + ((c.pay || 'cod') === k ? ' checked' : '') + '><span>' + PAY_M[k] + '</span></label>').join('') + '</fieldset><p class="note" role="note">Оплата на сайте не принимается. После подтверждения вы отправите заказ менеджеру в WhatsApp, он уточнит детали и срок.</p><dl class="kv-s"><div><dt>Получатель</dt><dd>' + esc(c.name || '') + ', ' + esc(c.phone || '') + '</dd></div><div><dt>Получение</dt><dd>' + DELIVERY_M[c.method || 'courier'] + (c.method === 'pickup' ? '' : ', ' + esc(c.city || '') + ', ' + esc(c.address || '')) + '</dd></div><div><dt>К оплате</dt><dd><b>' + money(t.total) + '</b></dd></div></dl>';
 }
 function viewCheckout() {
   if (!state.cart.length) return { title: 'Оформление — RaiCompany', html: '<div class="container"><h1>Оформление заказа</h1><div class="empty"><p class="muted">В корзине нет товаров.</p><a class="btn btn-primary" href="#/catalog">В каталог</a></div></div>', mount() { } };
@@ -1535,17 +1603,27 @@ function orderNo(prefix) {
 }
 function placeOrder() {
   const c = state.checkout, t = calcTotals(state.cart, state.promo, c.method || 'courier');
-  const o = { no: orderNo('DR'), type: 'order', date: new Date().toISOString(), contact: { name: c.name, phone: c.phone }, method: c.method || 'courier', city: c.city, address: c.method === 'pickup' ? '' : c.address, comment: c.comment || '', pay: c.pay || 'cod', promo: state.promo, totals: t, items: state.cart.map(l => ({ name: lineName(l), opts: lineOpts(l), qty: l.qty, unit: l.kind === 'meter' ? 'м' : 'шт.', total: lineTotal(l) })) };
-  setState({ orders: state.orders.concat(o), cart: [], promo: '', checkout: { name: c.name, phone: c.phone } });
+  const o = { no: orderNo('RC'), type: 'order', date: new Date().toISOString(), contact: { name: c.name, phone: c.phone, email: c.email || '' }, method: c.method || 'courier', city: c.city, address: c.method === 'pickup' ? '' : c.address, comment: c.comment || '', pay: c.pay || 'cod', promo: state.promo, totals: t, items: state.cart.map(l => ({ name: lineName(l), opts: lineOpts(l), qty: l.qty, unit: l.kind === 'meter' ? 'м' : 'шт.', total: lineTotal(l) })) };
+  setState({ orders: state.orders.concat(o), cart: [], promo: '', checkout: { name: c.name, phone: c.phone, email: c.email } });
   location.hash = '#/order/' + o.no;
 }
+
+function waText(o) {
+  const L = [SHOP.name + ': ' + (o.type === 'samples' ? 'заказ образцов' : 'заказ') + ' ' + o.no, ''];
+  o.items.forEach((i, n) => L.push((n + 1) + '. ' + i.name + (i.opts ? ' (' + i.opts + ')' : '') + (i.qty ? ' × ' + i.qty + ' ' + (i.unit || '') : '') + (o.type === 'samples' ? '' : ' — ' + money(i.total))));
+  if (o.type !== 'samples') { L.push('', 'К оплате: ' + money(o.totals.total) + (o.promo ? ' (промокод ' + o.promo + ')' : '')); L.push('Оплата: ' + (PAY_M[o.pay] || o.pay)); L.push('Получение: ' + DELIVERY_M[o.method]); }
+  L.push('Имя: ' + o.contact.name, 'Телефон: ' + o.contact.phone);
+  if (o.city) L.push('Город: ' + o.city); if (o.address) L.push('Адрес: ' + o.address); if (o.comment) L.push('Комментарий: ' + o.comment);
+  return L.join('\n');
+}
+const waLink = o => 'https://wa.me/' + SHOP.wa + '?text=' + encodeURIComponent(waText(o));
 function viewOrder(seg) {
   const o = state.orders.find(x => x.no === seg[1]);
   if (!o) return viewNotFound('Заказ не найден');
   const isS = o.type === 'samples';
-  const html = '<div class="container narrow order"><div class="ok-box"><span class="ok-i" aria-hidden="true">✓</span><h1>' + (isS ? 'Образцы заказаны' : 'Заказ оформлен') + '</h1><p class="lead sm">Номер: <b>' + esc(o.no) + '</b>. ' + (isS ? 'Образцы приедут за 2–4 дня, это бесплатно.' : 'Менеджер позвонит вам в течение рабочего дня и уточнит детали.') + '</p></div>' +
+  const html = '<div class="container narrow order"><div class="ok-box"><span class="ok-i" aria-hidden="true">✓</span><h1>' + (isS ? 'Образцы собраны' : 'Заказ собран') + '</h1><p class="lead sm">Номер: <b>' + esc(o.no) + '</b>. ' + 'Осталось отправить его менеджеру: нажмите кнопку, и сообщение с заказом откроется в WhatsApp.' + '</p><a class="btn btn-primary wa" href="' + esc(waLink(o)) + '" target="_blank" rel="noopener">Отправить в WhatsApp</a><p class="small muted">Пока вы не отправили сообщение, менеджер заказ не получит.</p></div>' +
     '<table class="brk"><thead><tr><th scope="col">Позиция</th><th scope="col">Сумма</th></tr></thead><tbody>' + o.items.map(i => '<tr><th scope="row">' + esc(i.name) + '<small>' + esc(i.opts || '') + (i.qty ? ' · ' + i.qty + ' ' + (i.unit || '') : '') + '</small></th><td>' + (isS ? 'бесплатно' : money(i.total)) + '</td></tr>').join('') + '</tbody>' + (isS ? '' : '<tfoot><tr><th scope="row">К оплате</th><td>' + money(o.totals.total) + '</td></tr></tfoot>') + '</table>' +
-    '<dl class="kv-s"><div><dt>Получатель</dt><dd>' + esc(o.contact.name) + ', ' + esc(o.contact.phone) + '</dd></div><div><dt>Доставка</dt><dd>' + esc(isS ? 'Почтой' : DELIVERY_M[o.method]) + (o.city ? ', ' + esc(o.city) : '') + (o.address ? ', ' + esc(o.address) : '') + '</dd></div>' + (isS ? '' : '<div><dt>Оплата</dt><dd>' + PAY_M[o.pay] + '</dd></div>') + '</dl><div class="order-a"><button class="btn btn-primary" type="button" data-act="orderprint">Распечатать</button><button class="btn btn-secondary" type="button" data-act="orderdl" data-no="' + esc(o.no) + '">Скачать</button><a class="btn btn-ghost" href="#/catalog">Продолжить покупки</a></div></div>';
+    '<dl class="kv-s"><div><dt>Получатель</dt><dd>' + esc(o.contact.name) + ', ' + esc(o.contact.phone) + '</dd></div><div><dt>Доставка</dt><dd>' + esc(isS ? 'Почтой' : DELIVERY_M[o.method]) + (o.city ? ', ' + esc(o.city) : '') + (o.address ? ', ' + esc(o.address) : '') + '</dd></div>' + (isS ? '' : '<div><dt>Оплата</dt><dd>' + (PAY_M[o.pay] || o.pay) + '</dd></div>') + '</dl><div class="order-a"><button class="btn btn-primary" type="button" data-act="orderprint">Распечатать</button><button class="btn btn-secondary" type="button" data-act="orderdl" data-no="' + esc(o.no) + '">Скачать</button><a class="btn btn-ghost" href="#/catalog">Продолжить покупки</a></div></div>';
   return { title: 'Заказ ' + o.no + ' — RaiCompany', html, mount() { } };
 }
 ACTS.orderprint = function () { document.body.classList.add('print-order'); window.print(); setTimeout(() => document.body.classList.remove('print-order'), 500); };
@@ -1604,9 +1682,9 @@ ACTS.add = function (el) {
   addToCart({ id: it.id, kind: k === 'meter' ? 'meter' : 'piece', qty: 1, price: priceFor(it, o), opts: o });
 };
 function page(title, body) { return { title: title + ' — RaiCompany', html: '<div class="container narrow prose"><nav class="crumbs" aria-label="Хлебные крошки"><a href="#/">Главная</a><span aria-hidden="true">/</span><span aria-current="page">' + title + '</span></nav><h1>' + title + '</h1>' + body + '</div>', mount() { } }; }
-function viewAbout() { return page('О магазине', '<p class="lead sm">RaiCompany появился, когда мы устали искать хорошую ткань и ровный пошив в одном месте. Теперь это одна мастерская и один каталог.</p><p>Мы работаем с тканями более чем 30 типов: от тяжёлого бархата и жаккарда до воздушной органзы и огнестойких составов для кафе и отелей. У каждой ткани есть бесплатный образец, чтобы вы увидели цвет при своём свете.</p><p>Шьём классические шторы, тюль, римские и японские панели, помогаем с карнизами и фурнитурой. Для расчёта расхода есть калькулятор, а для окон сложной формы работает замер специалиста.</p><h2>Гарантия</h2><p>На пошив и фурнитуру действует гарантия два года. Если шов или механизм подвёл, мы переделаем изделие бесплатно.</p>'); }
-function viewDelivery() { return page('Доставка и оплата', '<h2>Доставка</h2><p>По Астане привозим курьером за 1–2 дня после готовности заказа. По Казахстану отправляем транспортной компанией. Доставка бесплатна от 50 000 ₸, ниже этой суммы стоит 2 500 ₸. Самовывоз из магазина бесплатный.</p><h2>Сроки пошива</h2><ul><li>Классические шторы: 5–10 дней</li><li>Тюль: 3–5 дней</li><li>Рулонные шторы: 5–7 дней</li><li>Римские шторы и японские панели: 7–10 дней</li></ul><h2>Оплата</h2><p>При получении, онлайн или в рассрочку. В демонстрационной версии оплата не проводится.</p><h2>Возврат</h2><p>Готовые изделия и нерезаные остатки рулона возвращаются в течение 14 дней. Отрез под ваш размер и пошив по меркам возврату не подлежат, поэтому мы советуем сначала заказать образец.</p>'); }
-function viewContacts() { return page('Контакты', '<dl class="kv-s big"><div><dt>Адрес</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=E-429+14%2F2+Astana+Kazakhstan" target="_blank" rel="noopener">E-429 14/2 Astana Kazakhstan</a></dd></div><div><dt>Телефон</dt><dd><a href="tel:+77001405040">+7 700 140 50 40</a></dd></div><div><dt>WhatsApp</dt><dd><a href="https://wa.me/77001405040" target="_blank" rel="noopener">Написать в WhatsApp</a></dd></div><div><dt>Режим работы</dt><dd>Пн–Сб 10:00–19:00, воскресенье выходной</dd></div></dl>'); }
+function viewAbout() { return page('О магазине', '<p class="lead sm">RaiCompany шьёт шторы на заказ и продаёт ткани, готовые шторы и карнизы. Мастерская и магазин работают в Астане.</p><p>Мы работаем с тканями более чем 30 типов: от тяжёлого бархата и жаккарда до воздушной органзы и огнестойких составов для кафе и отелей. У каждой ткани есть бесплатный образец, чтобы вы увидели цвет при своём свете.</p><p>Шьём классические шторы, тюль, римские и японские панели, помогаем с карнизами и фурнитурой. Для расчёта расхода есть калькулятор, а для окон сложной формы работает замер специалиста.</p><h2>Гарантия</h2><p>На пошив и фурнитуру действует гарантия два года. Если шов или механизм подвёл, мы переделаем изделие бесплатно.</p>'); }
+function viewDelivery() { return page('Доставка и оплата', '<h2>Доставка</h2><p>По Астане привозим курьером за 1–2 дня после готовности заказа. По Казахстану отправляем транспортной компанией. Доставка бесплатна от 50 000 ₸, ниже этой суммы стоит 2 500 ₸. Самовывоз из магазина бесплатный.</p><h2>Сроки пошива</h2><ul><li>Классические шторы: 5–10 дней</li><li>Тюль: 3–5 дней</li><li>Рулонные шторы: 5–7 дней</li><li>Римские шторы и японские панели: 7–10 дней</li></ul><h2>Оплата</h2><p>При получении или предоплатой переводом. Реквизиты и итоговую сумму пришлёт менеджер после того, как получит ваш заказ в WhatsApp.</p><h2>Возврат</h2><p>Готовые изделия и нерезаные остатки рулона возвращаются в течение 14 дней. Отрез под ваш размер и пошив по меркам возврату не подлежат, поэтому мы советуем сначала заказать образец.</p>'); }
+function viewContacts() { return page('Контакты', '<dl class="kv-s big"><div><dt>Адрес</dt><dd>' + SHOP.address + '</dd></div><div><dt>Телефон</dt><dd><a href="tel:' + SHOP.tel + '">' + SHOP.phone + '</a></dd></div><div><dt>WhatsApp</dt><dd><a href="https://wa.me/' + SHOP.wa + '" target="_blank" rel="noopener">Написать в WhatsApp</a></dd></div><div><dt>Режим работы</dt><dd>' + SHOP.hours + ', воскресенье выходной</dd></div></dl>'); }
 function viewNotFound(t) { return { title: 'Страница не найдена — RaiCompany', html: '<div class="container"><div class="empty"><h1>' + (t || 'Страница не найдена') + '</h1><p class="muted">Возможно, ссылка устарела или в ней опечатка.</p><a class="btn btn-primary" href="#/catalog">В каталог</a></div></div>', mount() { } }; }
 
 /* ================= ROUTER / LAYERS / INIT ================= */
@@ -1767,6 +1845,7 @@ function initHeader() {
   $('#burger').addEventListener('click', () => openLayer($('#mmenu'), $('#burger'), 'menu'));
   $('#mclose').addEventListener('click', () => closeLayer('menu'));
   $('#mmcats').innerHTML = CATS.map(c => '<li><a href="#/catalog/' + c.id + '">' + esc(c.name) + '</a></li>').join('');
+  $('#themebtn').addEventListener('click', () => { const t = effectiveTheme() === 'dark' ? 'light' : 'dark'; applyTheme(t); setState({ theme: t }); syncThemeBtn(); });
   matchMedia('(min-width:901px)').addEventListener('change', e => { if (e.matches) { closeLayer('menu'); closeLayer('filters'); } });
   const hd = $('#hdr'); const onS = () => hd.classList.toggle('scrolled', window.scrollY > 8); onS(); window.addEventListener('scroll', onS, { passive: true });
   $('#year').textContent = new Date().getFullYear();
@@ -1806,7 +1885,7 @@ function selfTests() {
 function init() {
   loadState();
   applyTheme(state.theme);
-  initHeader(); updateBadges();
+  initHeader(); syncThemeBtn(); updateBadges();
   subscribe(p => {
     if ('cart' in p || 'promo' in p) { updateBadges(); refreshCart(); }
     if ('favorites' in p) { updateBadges(); updateFavButtons(); if (route.name === 'favorites') rerender(); }
@@ -1827,12 +1906,260 @@ function init() {
   document.addEventListener('submit', e => { if (e.target.dataset && e.target.dataset.form === 'promo') { e.preventDefault(); applyPromo(e.target.elements.promo.value); } });
   $('#cartbtn').addEventListener('click', e => { e.preventDefault(); openDrawer(); });
   $('#dclose').addEventListener('click', () => closeLayer('drawer'));
-  window.addEventListener('hashchange', () => renderRoute(false));
+  fxInit(); initButtons();
+  window.addEventListener('hashchange', go);
   renderRoute(true);
+  fxIntro();
   if (/[?&]debug=1/.test(location.search)) selfTests();
   if ('serviceWorker' in navigator) { /* офлайн-кеш не требуется */ }
 }
 if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+
+/* ================= FX: живая штора, шторы-переходы, 3D-галерея, кнопки ================= */
+const FXD = { el: null, l: null, r: null };
+function fxInit() { FXD.el = $('#drapeFx'); if (FXD.el) { FXD.l = $('.dp-l', FXD.el); FXD.r = $('.dp-r', FXD.el); } }
+
+/* ---------- переход: шторы закрываются, страница меняется, шторы раскрываются ---------- */
+function sweep(el, side, dir) {
+  const off = side * 102, mid = dir === 'in' ? side * 14 : side * 30, sk = side * 2.6;
+  const fr = dir === 'in'
+    ? [{ transform: 'translateX(' + off + '%) skewX(0deg)' }, { transform: 'translateX(' + mid + '%) skewX(' + sk + 'deg)', offset: .62 }, { transform: 'translateX(0%) skewX(0deg)' }]
+    : [{ transform: 'translateX(0%) skewX(0deg)' }, { transform: 'translateX(' + mid + '%) skewX(' + (-sk) + 'deg)', offset: .38 }, { transform: 'translateX(' + off + '%) skewX(0deg)' }];
+  const a = el.animate(fr, { duration: dir === 'in' ? 560 : 900, easing: dir === 'in' ? 'cubic-bezier(.65,0,.25,1)' : 'cubic-bezier(.55,0,.2,1)', fill: 'forwards' });
+  const fin = dir === 'in' ? 'translateX(0%)' : 'translateX(' + off + '%)';
+  const done = () => { el.style.transform = fin; try { a.cancel(); } catch (e) { } };
+  return a.finished.then(done, done);
+}
+function drapeCover() {
+  const fx = FXD.el; if (!fx || reduceMotion() || !fx.animate) return Promise.resolve();
+  fx.classList.remove('idle'); fx.classList.add('shut');
+  return Promise.all([sweep(FXD.l, -1, 'in'), sweep(FXD.r, 1, 'in')]);
+}
+function drapeOpen() {
+  const fx = FXD.el; if (!fx) return Promise.resolve();
+  if (reduceMotion() || !fx.animate) { fx.classList.add('idle'); return Promise.resolve(); }
+  fx.classList.remove('shut');
+  return Promise.all([sweep(FXD.l, -1, 'out'), sweep(FXD.r, 1, 'out')]).then(() => fx.classList.add('idle'));
+}
+let tBusy = false, tPend = false;
+function go() {
+  if (reduceMotion() || !FXD.el) { renderRoute(false); return; }
+  if (tBusy) { tPend = true; return; }
+  tBusy = true;
+  drapeCover().then(() => { tPend = false; renderRoute(false); return new Promise(r => setTimeout(r, 90)); }).then(drapeOpen).then(() => { tBusy = false; if (tPend) { tPend = false; go(); } });
+}
+function fxIntro() {
+  tBusy = true;
+  setTimeout(() => { drapeOpen().then(() => { tBusy = false; if (tPend) { tPend = false; go(); } }); }, 300);
+}
+
+/* ---------- живая штора (WebGL) ---------- */
+const FS_CURTAIN = `
+precision highp float;
+uniform vec2 uRes; uniform float uT; uniform vec2 uM; uniform float uOpen; uniform float uHover;
+uniform vec3 uWall; uniform vec3 uCurt; uniform vec3 uLight;
+float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+float noise(vec2 p){ vec2 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);
+  return mix(mix(hash(i), hash(i + vec2(1.0, 0.0)), f.x), mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), f.x), f.y); }
+float A;
+vec4 panel(vec2 p, float mxm, float side, out float sh) {
+  float x = p.x;
+  float g = mix(0.12, 0.68, uOpen);
+  float e = 0.5 - g * 0.5;
+  float w = pow(max(0.0, 0.92 - p.y) / 0.92, 1.4);
+  float sway = sin(uT * 0.8 + p.y * 4.0 + side * 1.3) * 0.012 * w + sin(uT * 1.6 + p.y * 9.0) * 0.004 * w;
+  float flare = 0.04 * pow(1.0 - p.y, 2.0);
+  vec2 dm = vec2((x - mxm) * A, p.y - uM.y);
+  float push = exp(-dot(dm, dm) * 14.0) * uHover;
+  float dirm = x > mxm ? 1.0 : -1.0;
+  float ee = e + sway + flare + push * 0.05 * dirm;
+  float cov = 1.0 - smoothstep(ee - 0.0015, ee + 0.0015, x);
+  float s = x / ee;
+  float ph = s * 6.2831 * 7.0;
+  ph += noise(vec2(s * 5.0, p.y * 2.0)) * 0.9;
+  ph += w * (0.7 * sin(uT * 0.9 + p.y * 3.0 + side) + 0.3 * sin(uT * 1.7 + p.y * 7.0));
+  ph += push * dirm * 1.2;
+  float hem = 0.05 + 0.014 * sin(ph * 0.5 + 1.0) + 0.01 * w * sin(uT + side);
+  float vis = cov * step(hem, p.y) * step(p.y, 0.94);
+  float nx = sin(ph) * 0.85;
+  vec3 N = normalize(vec3(nx, 0.0, 0.7));
+  vec3 L = normalize(vec3(0.8, 0.25, 0.75));
+  float diff = clamp(dot(N, L), 0.0, 1.0);
+  float shade = (0.66 + 0.5 * diff) * (0.90 + 0.10 * cos(ph + 0.6));
+  shade *= mix(0.9, 1.04, smoothstep(0.0, 0.35, p.y)) * (1.0 - 0.14 * smoothstep(0.82, 0.94, p.y));
+  shade += 0.12 * exp(-(ee - x) * 35.0);
+  float th = 0.5 + 0.5 * sin(p.x * uRes.x * 0.9);
+  float tex = 1.0 + 0.035 * (th - 0.5) + 0.05 * (noise(p * uRes * 0.6) - 0.5);
+  vec3 col = uCurt * shade * tex;
+  col *= 1.0 - 0.25 * (1.0 - smoothstep(hem, hem + 0.012, p.y));
+  sh = (1.0 - cov) * exp(-(x - ee) * 28.0) * 0.22 * step(hem, p.y) * step(p.y, 0.94);
+  return vec4(col, vis);
+}
+void main() {
+  vec2 uv = gl_FragCoord.xy / uRes; A = uRes.x / uRes.y;
+  vec3 col = uWall * (1.0 - 0.16 * length((uv - vec2(0.5, 0.55)) * vec2(A * 0.8, 1.0)));
+  vec2 wc = vec2(0.5, 0.52), ws = vec2(0.27, 0.31);
+  vec2 d = abs(uv - wc) - ws;
+  float dd = max(d.x, d.y);
+  float inside = 1.0 - smoothstep(0.0, 0.004, dd);
+  vec3 sky = mix(vec3(1.0, 0.96, 0.88), vec3(0.74, 0.85, 0.95), smoothstep(0.25, 0.83, uv.y));
+  sky += vec3(1.0, 0.9, 0.7) * exp(-length((uv - vec2(0.62, 0.7)) * vec2(A, 1.0)) * 5.0) * 0.6;
+  float hill = 0.33 + 0.04 * sin(uv.x * 9.0) + 0.02 * sin(uv.x * 23.0);
+  sky = mix(sky, vec3(0.72, 0.80, 0.72), 0.85 * step(uv.y, hill));
+  float bars = max(step(abs(uv.x - wc.x), 0.004), step(abs(uv.y - (wc.y + 0.02)), 0.004));
+  float frame = step(-0.012, dd);
+  vec3 win = mix(sky, vec3(0.98, 0.96, 0.93), max(bars, frame));
+  col += uLight * exp(-max(dd, 0.0) * 9.0) * 0.5 * (1.0 - inside);
+  col = mix(col, win, inside);
+  float tm = step(0.12, uv.y) * step(uv.y, 0.94) * smoothstep(0.1, 0.2, uv.x) * smoothstep(0.1, 0.2, 1.0 - uv.x);
+  float tw = 0.5 + 0.5 * sin(uv.x * 46.0 + sin(uv.y * 5.0 + uT * 0.6) * 1.6 + uT * 0.4);
+  float tul = tm * (0.34 + 0.12 * tw) * (0.7 + 0.3 * noise(uv * vec2(uRes.x * 0.5, uRes.y * 0.02)));
+  col = mix(col, vec3(1.0, 0.98, 0.95), tul);
+  float shL, shR;
+  vec4 pl = panel(uv, uM.x, -1.0, shL);
+  vec4 pr = panel(vec2(1.0 - uv.x, uv.y), 1.0 - uM.x, 1.0, shR);
+  col *= 1.0 - shL; col *= 1.0 - shR;
+  col = mix(col, pl.rgb, pl.a);
+  col = mix(col, pr.rgb, pr.a);
+  float ry = (uv.y - 0.935) / 0.025;
+  float rod = step(0.0, ry) * step(ry, 1.0) * step(0.04, uv.x) * step(uv.x, 0.96);
+  col = mix(col, mix(vec3(0.55, 0.43, 0.30), vec3(0.93, 0.80, 0.62), sin(ry * 3.14)), rod);
+  float fin = max(1.0 - smoothstep(0.016, 0.019, length((uv - vec2(0.04, 0.9475)) * vec2(A, 1.0))), 1.0 - smoothstep(0.016, 0.019, length((uv - vec2(0.96, 0.9475)) * vec2(A, 1.0))));
+  col = mix(col, vec3(0.82, 0.68, 0.48), fin);
+  col += (hash(uv * uRes + uT) - 0.5) * 0.012;
+  gl_FragColor = vec4(col, 1.0);
+}`;
+function glProg(gl, fs) {
+  const mk = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) { console.warn('shader: ' + gl.getShaderInfoLog(s)); return null; } return s; };
+  const v = mk(gl.VERTEX_SHADER, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}'), f = mk(gl.FRAGMENT_SHADER, fs);
+  if (!v || !f) return null;
+  const p = gl.createProgram(); gl.attachShader(p, v); gl.attachShader(p, f); gl.linkProgram(p);
+  if (!gl.getProgramParameter(p, gl.LINK_STATUS)) { console.warn('program: ' + gl.getProgramInfoLog(p)); return null; }
+  return p;
+}
+function cssRGB(name, fb) { const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim(); try { const c = hexRGB(v).map(x => x / 255); return c.some(isNaN) ? fb : c; } catch (e) { return fb; } }
+function initHeroCurtain() {
+  const host = $('.hero-art'); if (!host) return;
+  const cv = document.createElement('canvas'); cv.className = 'hero-cv'; cv.setAttribute('aria-hidden', 'true');
+  let gl = null; try { gl = cv.getContext('webgl', { antialias: false, alpha: false, powerPreference: 'low-power' }); } catch (e) { }
+  if (!gl) return;
+  const pr = glProg(gl, FS_CURTAIN); if (!pr) return;
+  host.insertBefore(cv, host.firstChild); host.classList.add('gl');
+  gl.useProgram(pr);
+  const buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+  const ap = gl.getAttribLocation(pr, 'p'); gl.enableVertexAttribArray(ap); gl.vertexAttribPointer(ap, 2, gl.FLOAT, false, 0, 0);
+  const U = n => gl.getUniformLocation(pr, n);
+  const L = { res: U('uRes'), t: U('uT'), m: U('uM'), open: U('uOpen'), hover: U('uHover'), wall: U('uWall'), curt: U('uCurt'), light: U('uLight') };
+  const reduce = reduceMotion();
+  const IDLE = .38;
+  const st = { open: reduce ? IDLE : 0, target: IDLE, hover: 0, hoverT: 0, mx: .5, my: .5, forced: false, vis: true, t0: performance.now(), last: 0, raf: 0, n: 0, col: null };
+  function colors() { st.col = { wall: cssRGB('--wall', [.94, .9, .85]), curt: cssRGB('--curtain', [.86, .76, .67]), light: cssRGB('--lightc', [1, .95, .84]) }; }
+  function resize() { const dpr = Math.min(window.devicePixelRatio || 1, 1.5); const w = Math.max(2, Math.round(host.clientWidth * dpr)), h = Math.max(2, Math.round(host.clientHeight * dpr)); if (cv.width !== w || cv.height !== h) { cv.width = w; cv.height = h; } gl.viewport(0, 0, cv.width, cv.height); }
+  function draw(now) {
+    if (!st.col || st.n++ % 40 === 0) colors();
+    const t = reduce ? 2.6 : (now - st.t0) / 1000;
+    gl.uniform2f(L.res, cv.width, cv.height); gl.uniform1f(L.t, t); gl.uniform2f(L.m, st.mx, st.my);
+    gl.uniform1f(L.open, st.open); gl.uniform1f(L.hover, st.hover);
+    gl.uniform3fv(L.wall, st.col.wall); gl.uniform3fv(L.curt, st.col.curt); gl.uniform3fv(L.light, st.col.light);
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+  }
+  function frame(now) {
+    st.raf = 0;
+    if (!document.body.contains(cv)) { try { const x = gl.getExtension('WEBGL_lose_context'); x && x.loseContext(); } catch (e) { } return; }
+    if (!st.vis || document.hidden) return;
+    const dt = Math.min(.05, (now - (st.last || now)) / 1000); st.last = now;
+    st.open += (st.target - st.open) * (1 - Math.exp(-dt * 3.2));
+    st.hover += (st.hoverT - st.hover) * (1 - Math.exp(-dt * 6));
+    draw(now);
+    st.raf = requestAnimationFrame(frame);
+  }
+  const kick = () => { if (reduce) { resize(); draw(performance.now()); return; } if (!st.raf && st.vis && !document.hidden) { st.last = 0; st.raf = requestAnimationFrame(frame); } };
+  const setTarget = () => { st.target = st.forced ? 1 : (st.hoverT ? .8 : IDLE); if (reduce) { st.open = st.target; kick(); } };
+  const pos = e => { const r = host.getBoundingClientRect(); st.mx = clamp((e.clientX - r.left) / r.width, 0, 1); st.my = clamp(1 - (e.clientY - r.top) / r.height, 0, 1); };
+  host.addEventListener('pointermove', e => { pos(e); if (!st.hoverT) { st.hoverT = 1; setTarget(); } if (reduce) kick(); });
+  host.addEventListener('pointerleave', () => { st.hoverT = 0; setTarget(); });
+  host.addEventListener('pointerdown', e => { pos(e); st.hoverT = 1; setTarget(); });
+  host.addEventListener('pointerup', e => { if (e.pointerType === 'touch') setTimeout(() => { st.hoverT = 0; setTarget(); }, 600); });
+  const btn = $('.curtain-btn', host);
+  if (btn) btn.addEventListener('click', () => { st.forced = !st.forced; btn.setAttribute('aria-pressed', st.forced); btn.textContent = st.forced ? 'Задвинуть шторы' : 'Раздвинуть шторы'; setTarget(); });
+  if ('IntersectionObserver' in window) new IntersectionObserver(es => { st.vis = es[0].isIntersecting; if (st.vis) kick(); }, { threshold: 0 }).observe(host);
+  document.addEventListener('visibilitychange', kick);
+  if ('ResizeObserver' in window) new ResizeObserver(() => { resize(); if (reduce) draw(performance.now()); }).observe(host); else window.addEventListener('resize', resize);
+  resize(); kick();
+}
+
+/* ---------- 3D-галерея тканей ---------- */
+const G3_TYPES = ['velvet', 'linen', 'jacquard', 'chenille', 'satin', 'organza', 'soft', 'blackout', 'cotton', 'voile', 'silk', 'kids'];
+let G3 = null;
+function gallery3dHTML() {
+  const items = G3_TYPES.map(t => CATALOG.find(i => i.type === t)).filter(Boolean);
+  return '<section class="sec alt g3-s" aria-labelledby="g3h"><div class="container"><div class="sec-h"><h2 id="g3h">Галерея тканей</h2><div class="sl-btns"><button class="btn btn-ghost icon" type="button" data-act="g3" data-dir="-1" aria-label="Повернуть галерею влево">←</button><button class="btn btn-ghost icon" type="button" data-act="g3" data-dir="1" aria-label="Повернуть галерею вправо">→</button></div></div><p class="muted g3-hint">Потяните, чтобы повернуть, или листайте стрелками. Нажмите на ткань, чтобы открыть.</p></div>' +
+    '<div class="g3" id="g3" tabindex="0" role="group" aria-roledescription="карусель" aria-label="Галерея тканей"><div class="g3-ring" id="g3ring" style="--n:' + items.length + '">' +
+    items.map((it, i) => '<a class="g3-c" href="#/product/' + it.id + '" draggable="false" style="--i:' + i + '"><span class="g3-art">' + artHTML(it, {}) + '</span><span class="g3-cap"><b>' + esc(TYPE_LABEL[it.type]) + '</b><span>' + esc(colorName(it, 0)) + ' · ' + money(it.price) + '</span></span></a>').join('') + '</div></div></section>';
+}
+function initGallery3D() {
+  const root = $('#g3'), ring = $('#g3ring'); if (!root || !ring) return;
+  const cards = $$('.g3-c', ring), n = cards.length, step = 360 / n, reduce = reduceMotion();
+  const S = { ang: 0, vel: 0, drag: false, lx: 0, moved: 0, hover: false, vis: true, raf: 0, tilt: -7, tiltT: -7, R: 400, fo: [] };
+  function size() { const cw = cards[0].offsetWidth || 190; S.R = Math.round((cw / 2) / Math.tan(Math.PI / n) * 1.2); ring.style.setProperty('--R', S.R + 'px'); }
+  function paint() {
+    ring.style.transform = 'translateZ(' + (-S.R) + 'px) rotateX(' + S.tilt.toFixed(2) + 'deg) rotateY(' + S.ang.toFixed(2) + 'deg)';
+    cards.forEach((c, i) => {
+      const a = (((i * step + S.ang) % 360) + 540) % 360 - 180;
+      c.style.setProperty('--o', Math.max(0, 1 - Math.abs(a) / 105).toFixed(3));
+      const f = Math.abs(a) < 70; if (S.fo[i] !== f) { S.fo[i] = f; c.tabIndex = f ? 0 : -1; c.setAttribute('aria-hidden', f ? 'false' : 'true'); }
+    });
+  }
+  function tick() {
+    S.raf = 0;
+    if (!document.body.contains(root)) return;
+    if (!S.vis || document.hidden) return;
+    if (!S.drag) { S.ang += S.vel; S.vel *= .94; if (Math.abs(S.vel) < .05 && !S.hover) S.ang += .07; }
+    S.tilt += (S.tiltT - S.tilt) * .08;
+    paint(); S.raf = requestAnimationFrame(tick);
+  }
+  const kick = () => { if (reduce) { paint(); return; } if (!S.raf && S.vis && !document.hidden) S.raf = requestAnimationFrame(tick); };
+  const nudge = d => { if (reduce) { S.ang += d * step; paint(); } else { S.vel += d * 1.6; kick(); } };
+  G3 = { nudge };
+  root.addEventListener('pointerdown', e => {
+    if (e.button > 0) return; S.drag = true; S.moved = 0; S.lx = e.clientX; S.vel = 0; root.classList.add('grab');
+    const mv = ev => { const dx = ev.clientX - S.lx; S.lx = ev.clientX; S.moved += Math.abs(dx); S.ang += dx * .32; S.vel = dx * .32; if (reduce) paint(); };
+    const up = () => { S.drag = false; root.classList.remove('grab'); window.removeEventListener('pointermove', mv); window.removeEventListener('pointerup', up); window.removeEventListener('pointercancel', up); kick(); };
+    window.addEventListener('pointermove', mv); window.addEventListener('pointerup', up); window.addEventListener('pointercancel', up);
+  });
+  root.addEventListener('click', e => { if (S.moved > 6) { e.preventDefault(); e.stopPropagation(); S.moved = 0; } }, true);
+  root.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') S.hover = true; });
+  root.addEventListener('pointerleave', () => { S.hover = false; S.tiltT = -7; });
+  root.addEventListener('pointermove', e => { if (e.pointerType !== 'mouse' || reduce) return; const r = root.getBoundingClientRect(); S.tiltT = -7 + ((e.clientY - r.top) / r.height - .5) * -9; });
+  root.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') { nudge(-1); e.preventDefault(); } else if (e.key === 'ArrowRight') { nudge(1); e.preventDefault(); } });
+  if ('IntersectionObserver' in window) new IntersectionObserver(es => { S.vis = es[0].isIntersecting; if (S.vis) kick(); }, { threshold: 0 }).observe(root);
+  document.addEventListener('visibilitychange', kick);
+  window.addEventListener('resize', debounce(() => { if (!document.body.contains(root)) return; size(); paint(); }, 150));
+  size(); paint(); kick();
+}
+ACTS.g3 = function (el) { if (G3) G3.nudge(+el.dataset.dir); };
+
+/* ---------- кнопки: блик за курсором, магнит, волна по нажатию ---------- */
+function initButtons() {
+  document.addEventListener('pointermove', e => {
+    const b = e.target.closest && e.target.closest('.btn'); if (!b) return;
+    const r = b.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+    b.style.setProperty('--mx', x + 'px'); b.style.setProperty('--my', y + 'px');
+    if (b.dataset.mag !== undefined && !reduceMotion()) { b.style.setProperty('--tx', ((x / r.width - .5) * 10).toFixed(1) + 'px'); b.style.setProperty('--ty', ((y / r.height - .5) * 8).toFixed(1) + 'px'); }
+  }, { passive: true });
+  document.addEventListener('pointerout', e => {
+    const b = e.target.closest && e.target.closest('.btn[data-mag]');
+    if (b && !b.contains(e.relatedTarget)) { b.style.setProperty('--tx', '0px'); b.style.setProperty('--ty', '0px'); }
+  });
+  document.addEventListener('pointerdown', e => {
+    const b = e.target.closest && e.target.closest('.btn'); if (!b || reduceMotion()) return;
+    const r = b.getBoundingClientRect();
+    b.style.setProperty('--mx', (e.clientX - r.left) + 'px'); b.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    b.classList.remove('rip'); void b.offsetWidth; b.classList.add('rip');
+  });
+  document.addEventListener('animationend', e => { if (e.target.classList && e.target.classList.contains('rip')) e.target.classList.remove('rip'); });
+}
 
 })();
 </script>
