@@ -382,14 +382,14 @@ input[aria-invalid="true"]{border-color:var(--err)}
 :root[data-theme="dark"] .dp-logo{color:#f3ede6}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .dp-logo{color:#f3ede6}}
 /* 3D-галерея */
 .g3-hint{margin-top:-8px}
-.g3{--cw:190px;--ch:250px;position:relative;margin-top:12px;height:clamp(340px,44vw,430px);perspective:1500px;overflow:hidden;cursor:grab;touch-action:pan-y;display:grid;place-items:center;user-select:none;-webkit-user-select:none}
+.g3{--cw:clamp(170px,13.5vw,290px);--ch:calc(var(--cw) * 1.32);position:relative;margin-top:12px;height:calc(var(--ch) * 1.7);perspective:calc(var(--cw) * 7.5);overflow:hidden;cursor:grab;touch-action:pan-y;display:grid;place-items:center;user-select:none;-webkit-user-select:none}
 .g3.grab{cursor:grabbing}
 .g3-ring{position:relative;width:var(--cw);height:var(--ch);transform-style:preserve-3d;will-change:transform}
-.g3-c{position:absolute;inset:0;display:flex;flex-direction:column;border-radius:14px;overflow:hidden;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);text-decoration:none;backface-visibility:hidden;-webkit-backface-visibility:hidden;opacity:var(--o,1);transform:rotateY(calc(var(--i) * (360deg / var(--n)))) translateZ(var(--R,400px))}
+.g3-c{position:absolute;inset:0;display:flex;flex-direction:column;border-radius:14px;overflow:hidden;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);text-decoration:none;opacity:var(--o,1);transform:rotateY(calc(var(--i) * (360deg / var(--n)))) translateZ(var(--R,400px))}
 .g3-art{position:relative;flex:1;display:block}.g3-art .art{position:absolute;inset:0}
 .g3-cap{display:flex;flex-direction:column;gap:2px;padding:10px 12px 12px;font-size:12px;color:var(--muted);line-height:1.3}.g3-cap b{font-size:14px;color:var(--text);font-weight:600}
 .g3-c:hover .g3-cap b{color:var(--accent)}
-@media(max-width:560px){.g3{--cw:150px;--ch:205px;height:320px}}
+@media(max-width:560px){.g3{--cw:150px}}
 @media(max-width:1023px){.hero-in{grid-template-columns:1fr}}
 @media(max-width:560px){.hero-art{display:block;aspect-ratio:4/5}}
 @media(prefers-reduced-motion:reduce){.drape-fx{display:none!important}.hero h1 .w>span,.hero .eyebrow,.hero .lead,.hero-cta{animation:none!important}}
@@ -2090,7 +2090,7 @@ function initHeroCurtain() {
 }
 
 /* ---------- 3D-галерея тканей ---------- */
-const G3_TYPES = ['velvet', 'linen', 'jacquard', 'chenille', 'satin', 'organza', 'soft', 'blackout', 'cotton', 'voile', 'silk', 'kids'];
+const G3_TYPES = ['velvet', 'linen', 'jacquard', 'chenille', 'satin', 'organza', 'soft', 'blackout', 'cotton', 'voile', 'silk', 'kids', 'dimout', 'canvas', 'chiffon', 'thermo'];
 let G3 = null;
 function gallery3dHTML() {
   const items = G3_TYPES.map(t => CATALOG.find(i => i.type === t)).filter(Boolean);
@@ -2101,13 +2101,17 @@ function gallery3dHTML() {
 function initGallery3D() {
   const root = $('#g3'), ring = $('#g3ring'); if (!root || !ring) return;
   const cards = $$('.g3-c', ring), n = cards.length, step = 360 / n, reduce = reduceMotion();
-  const S = { ang: 0, vel: 0, drag: false, lx: 0, moved: 0, hover: false, vis: true, raf: 0, tilt: -7, tiltT: -7, R: 400, fo: [] };
-  function size() { const cw = cards[0].offsetWidth || 190; S.R = Math.round((cw / 2) / Math.tan(Math.PI / n) * 1.2); ring.style.setProperty('--R', S.R + 'px'); }
+  const S = { ang: 0, vel: 0, drag: false, lx: 0, moved: 0, hover: false, vis: true, raf: 0, tilt: -12, tiltT: -12, R: 400, fo: [] };
+  /* радиус кольца считается от ширины блока, поэтому дуга карточек занимает всю ширину экрана */
+  function size() { const W = root.clientWidth || window.innerWidth; S.Rx = Math.round(clamp(W * 0.43, 150, 1000)); S.Rz = Math.round(clamp(W * 0.2, 110, 420)); }
   function paint() {
-    ring.style.transform = 'translateZ(' + (-S.R) + 'px) rotateX(' + S.tilt.toFixed(2) + 'deg) rotateY(' + S.ang.toFixed(2) + 'deg)';
+    ring.style.transform = 'translateY(' + Math.round(S.Rz * .2) + 'px) rotateX(' + S.tilt.toFixed(2) + 'deg)';
     cards.forEach((c, i) => {
-      const a = (((i * step + S.ang) % 360) + 540) % 360 - 180;
-      c.style.setProperty('--o', Math.max(0, 1 - Math.abs(a) / 105).toFixed(3));
+      const base = i * step, th = base + S.ang;
+      const a = ((th % 360) + 540) % 360 - 180;
+      const rad = th * Math.PI / 180, cs = Math.cos(rad);
+      c.style.transform = 'translate3d(' + (S.Rx * Math.sin(rad)).toFixed(1) + 'px,' + (-(1 - cs) * S.Rz * .16).toFixed(1) + 'px,' + (S.Rz * (cs - 1)).toFixed(1) + 'px)';
+      c.style.setProperty('--o', (0.45 + 0.55 * (1 + Math.cos(a * Math.PI / 180)) / 2).toFixed(3));
       const f = Math.abs(a) < 70; if (S.fo[i] !== f) { S.fo[i] = f; c.tabIndex = f ? 0 : -1; c.setAttribute('aria-hidden', f ? 'false' : 'true'); }
     });
   }
@@ -2130,8 +2134,8 @@ function initGallery3D() {
   });
   root.addEventListener('click', e => { if (S.moved > 6) { e.preventDefault(); e.stopPropagation(); S.moved = 0; } }, true);
   root.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') S.hover = true; });
-  root.addEventListener('pointerleave', () => { S.hover = false; S.tiltT = -7; });
-  root.addEventListener('pointermove', e => { if (e.pointerType !== 'mouse' || reduce) return; const r = root.getBoundingClientRect(); S.tiltT = -7 + ((e.clientY - r.top) / r.height - .5) * -9; });
+  root.addEventListener('pointerleave', () => { S.hover = false; S.tiltT = -12; });
+  root.addEventListener('pointermove', e => { if (e.pointerType !== 'mouse' || reduce) return; const r = root.getBoundingClientRect(); S.tiltT = -12 + ((e.clientY - r.top) / r.height - .5) * -9; });
   root.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') { nudge(-1); e.preventDefault(); } else if (e.key === 'ArrowRight') { nudge(1); e.preventDefault(); } });
   if ('IntersectionObserver' in window) new IntersectionObserver(es => { S.vis = es[0].isIntersecting; if (S.vis) kick(); }, { threshold: 0 }).observe(root);
   document.addEventListener('visibilitychange', kick);
